@@ -2,21 +2,7 @@ import java.util.LinkedList;
 public class TelephoneKeypad {
 	
 	public class TelephoneData{
-		private int numberPressed = 0;
-		private int numberOfTimes = 0;
-		private char charEntered;
 		
-		public class TelephoneData(int numberPressed, int numberOfTimes){
-			this.numberPressed = numberPressed;
-			this.numberOfTimes = numberOfTimes
-			this.charEntered = convertNumberToChar(this.numberPressed,this.numberOfTimes);
-		}
-		//Not done yet
-		private char convertNumberToChar(int number, int times){
-			return null;
-		}
-	
-	}
 
 	private LinkedList<TelephoneData> theList;
 	private String original;
@@ -50,4 +36,9 @@ public class TelephoneKeypad {
 			}
 		}
 	}
+	
+	public String toString(){
+		return theList.toString();
+	}
+	
 }

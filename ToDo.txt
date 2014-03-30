@@ -1,7 +1,6 @@
 ToDo
 ---------------------
-Finish TelephoneKeypad class
-Seperate Telephone keypad class and Telephone data class
-Finish telephone data class
-Make Driver class
+Finish TelephoneKeypad class -- maybe done
+Finish telephone data class -- maybe done
+Make Driver class -- in progress
 Test classes
