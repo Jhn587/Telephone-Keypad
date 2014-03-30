@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 public class TelephoneKeypad {
 	
-	public class TelephoneData{
+	
 		
 
 	private LinkedList<TelephoneData> theList;
@@ -9,6 +9,7 @@ public class TelephoneKeypad {
 	
 	//This classes constructor
 	public TelephoneKeypad(String input){
+		this.original = input;
 		theList = new LinkedList<TelephoneData>();
 		populateTheList(this.original);
 	}
@@ -20,11 +21,12 @@ public class TelephoneKeypad {
 		
 		//This loop should go through and get each digit and the number of times it was pressed and store it in a linked list
 		for(int i = 0; i<toDecode.length(); i++){
+			
 			//If the char we are at is a space we have gone on to the next letter so store the old one
 			//Or if we are at the end of the string
 			if(toDecode.charAt(i) == ' '|| (i == toDecode.length()-1)){
 				//if we are at the last character we need to make sure it matches and increase the number of occurances
-				if(i == toDecode.length()-1 && toDecode.charAt(i)==Character.parseChar(numberPressed)){
+				if(i == toDecode.length()-1 && toDecode.charAt(i)==((char)numberPressed)){
 					occurances++;
 				}
 				TelephoneData toStore = new TelephoneData(occurances, numberPressed);
@@ -32,7 +34,7 @@ public class TelephoneKeypad {
 				occurances = 0;//reset counter for occurances of the particular number
 			} else{
 				occurances++;
-				numberPressed = Integer.parseInt(toDecode.charAt(i));
+				numberPressed = (int) toDecode.charAt(i);
 			}
 		}
 	}
