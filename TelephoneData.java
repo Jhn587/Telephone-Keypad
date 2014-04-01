@@ -7,7 +7,7 @@ public class TelephoneData {
 		
 	public TelephoneData(int numberPressed, int numberOfTimes){
 		this.numberPressed = numberPressed;
-		this.numberOfTimes = numberOfTimes;
+		this.numberOfTimes = numberOfTimes-1;
 		this.charEntered = convertNumberToChar(this.numberPressed,this.numberOfTimes);
 	}
 	//Not done yet

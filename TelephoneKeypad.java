@@ -26,15 +26,19 @@ public class TelephoneKeypad {
 			//Or if we are at the end of the string
 			if(toDecode.charAt(i) == ' '|| (i == toDecode.length()-1)){
 				//if we are at the last character we need to make sure it matches and increase the number of occurances
-				if(i == toDecode.length()-1 && toDecode.charAt(i)==((char)numberPressed)){
+				if(i == toDecode.length()-1 ){
+					numberPressed = (int) toDecode.charAt(i) - '0';
 					occurances++;
 				}
-				TelephoneData toStore = new TelephoneData(occurances, numberPressed);
+				
+				TelephoneData toStore = new TelephoneData(numberPressed, occurances);
 				this.theList.add(toStore);
 				occurances = 0;//reset counter for occurances of the particular number
 			} else{
 				occurances++;
-				numberPressed = (int) toDecode.charAt(i);
+				numberPressed = (int) (toDecode.charAt(i) -'0');
+				
+				
 			}
 		}
 	}
