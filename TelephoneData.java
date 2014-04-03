@@ -74,7 +74,7 @@ public class TelephoneData {
 	}
 	//Not done yet
 	private char convertNumberToChar(char number, int times){
-		ArrayList<Character> toGet = this.forArrays.get(number)
+		ArrayList<Character> toGet = this.forArrays.get(number);
 		return toGet.get(times);
 	}
 	

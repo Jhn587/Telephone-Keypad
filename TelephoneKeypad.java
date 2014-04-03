@@ -17,7 +17,7 @@ public class TelephoneKeypad {
 	private void populateTheList(String toDecode){
 		
 		int occurances = 0;
-		int numberPressed = 0;
+		char numberPressed = '0';
 		
 		//This loop should go through and get each digit and the number of times it was pressed and store it in a linked list
 		for(int i = 0; i<toDecode.length(); i++){
@@ -27,7 +27,7 @@ public class TelephoneKeypad {
 			if(toDecode.charAt(i) == ' '|| (i == toDecode.length()-1)){
 				//if we are at the last character we need to make sure it matches and increase the number of occurances
 				if(i == toDecode.length()-1 ){
-					numberPressed = (int) toDecode.charAt(i) - '0';
+					numberPressed = toDecode.charAt(i);
 					occurances++;
 				}
 				
@@ -36,7 +36,7 @@ public class TelephoneKeypad {
 				occurances = 0;//reset counter for occurances of the particular number
 			} else{
 				occurances++;
-				numberPressed = (int) (toDecode.charAt(i) -'0');
+				numberPressed = toDecode.charAt(i);
 				
 				
 			}
