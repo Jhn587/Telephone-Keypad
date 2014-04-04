@@ -7,7 +7,9 @@ public class Driver{
 		System.out.println(toTest);
 		//int d = 5;
 		JOptionPane.showMessageDialog ( null, toTest ); 
-		String d = JOptionPane.showInputDialog(null, "enter an int");
+		String d = JOptionPane.showInputDialog(null, "Enter sequence of numbers to convert");
+		TelephoneKeypad fromGui = new TelephoneKeypad(d);
+		JOptionPane.showMessageDialog( null, fromGui );
 	}
 
 }

@@ -6,12 +6,14 @@ public class TelephoneKeypad {
 
 	private LinkedList<TelephoneData> theList;
 	private String original;
+	private String converted = "";
 	
 	//This classes constructor
 	public TelephoneKeypad(String input){
 		this.original = input;
 		theList = new LinkedList<TelephoneData>();
 		populateTheList(this.original);
+		converted = convertTheListToAString(this.theList);
 	}
 	
 	private void populateTheList(String toDecode){
@@ -43,8 +45,16 @@ public class TelephoneKeypad {
 		}
 	}
 	
+	private String convertTheListToAString(LinkedList<TelephoneData> toConvert){
+		String toReturn = "";
+		for(TelephoneData ele: toConvert){
+			toReturn += ele.toString();
+		}
+		return toReturn;
+	}
+	
 	public String toString(){
-		return theList.toString();
+		return converted;
 	}
 	
 }

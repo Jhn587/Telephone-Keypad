@@ -1,6 +1,6 @@
 ToDo
 ---------------------
-Finish TelephoneKeypad class -- maybe done
-Finish telephone data class -- maybe done
-Make Driver class -- in progress
-Test classes
+Test newest ToStrings
+Figure out how to Read in Strings from a text file
+Add said Strings to A linkedlist
+Find strings with .startsWith(aString);
