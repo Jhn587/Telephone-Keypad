@@ -6,10 +6,13 @@ public class Driver{
 		TelephoneKeypad toTest = new TelephoneKeypad(fromReddit);
 		System.out.println(toTest);
 		//int d = 5;
-		JOptionPane.showMessageDialog ( null, toTest ); 
+		
+		DictionaryOfWords hope = new DictionaryOfWords(toTest.toString());
+		JOptionPane.showMessageDialog ( null, toTest.toString() ); 
 		String d = JOptionPane.showInputDialog(null, "Enter sequence of numbers to convert");
 		TelephoneKeypad fromGui = new TelephoneKeypad(d);
 		JOptionPane.showMessageDialog( null, fromGui );
+		JOptionPane.showMessageDialog( null, hope );
 	}
 
 }
