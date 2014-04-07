@@ -1,6 +1,4 @@
 ToDo
 ---------------------
-Test newest ToStrings
-Figure out how to Read in Strings from a text file
-Add said Strings to A linkedlist
-Find strings with .startsWith(aString);
+Use a bst for faster finds
+
